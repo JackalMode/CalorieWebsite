@@ -1,0 +1,4 @@
+C:/Users/Mitchell Steenbergen/CLionProjects/M2OEP-msteenbe/cmake-build-debug/CMakeFiles/CalorieTracker.dir
+C:/Users/Mitchell Steenbergen/CLionProjects/M2OEP-msteenbe/cmake-build-debug/CMakeFiles/test.dir
+C:/Users/Mitchell Steenbergen/CLionProjects/M2OEP-msteenbe/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mitchell Steenbergen/CLionProjects/M2OEP-msteenbe/cmake-build-debug/CMakeFiles/rebuild_cache.dir
