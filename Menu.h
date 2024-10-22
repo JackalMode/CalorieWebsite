@@ -33,9 +33,10 @@ public:
     void searchByCalories(FoodDatabase& db);
     // Method to search food by either name, calories, or both
     void searchByChoice(FoodDatabase& db);
-    // Mathod to display all entries in the journal
+    // Method to display all entries in the journal
     void displayEnt();
-
+    // Method to display journal entries on a graph
+    void generateGraph();
 };
 
 #endif //CALORIETRACKER_MENU_H

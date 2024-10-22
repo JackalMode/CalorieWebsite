@@ -46,6 +46,11 @@ int main() {
                 menu.searchByChoice(db);
                 break;
             }
+            // Generate Graph
+            case 6: {
+                menu.generateGraph();
+                break;
+            }
             case 0: {
                 cout << "Exiting the program." << endl;
                 break;

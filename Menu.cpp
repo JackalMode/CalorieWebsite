@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <cstdlib>
 #include "Menu.h"
 #include "Food.h"
 #include "Journal.h"
@@ -14,7 +15,7 @@ Menu::Menu(FoodDatabase& db) : db(db) {}
 int Menu::getChoice(istream &ins) {
     string input;
     int num;
-    int firstO = 0, lastO = 5;
+    int firstO = 0, lastO = 6;
 
     // Menu options for user
     cout << "Calorie Tracker Menu\n";
@@ -23,6 +24,7 @@ int Menu::getChoice(istream &ins) {
     cout << "3. Remove Food\n";
     cout << "4. Display Journal Entries\n";
     cout << "5. Search Foods by Name, Calories, or Both\n";
+    cout << "6. Generate Calories Graph\n";
     cout << "0. Save and Exit\n";
 
     // Loop to validate user input
@@ -207,7 +209,7 @@ void Menu::calDisCal(std::istream &in, std::ostream &outs) {
     }
 
     string journalChoice, noteChoice;
-    Journal journal("Journal.csv");
+    Journal journal("cmake-build-debug/Journal.csv");
     char journalLower, noteLower;
     // Loop to decide if the user wants to save the entry
     while(!choice){
@@ -251,7 +253,7 @@ void Menu::calDisCal(std::istream &in, std::ostream &outs) {
  * Displays all journal entries
  */
 void Menu::displayEnt() {
-    Journal journal("Journal.csv");
+    Journal journal("cmake-build-debug/Journal.csv");
     journal.displayEntries();
 }
 
@@ -462,4 +464,13 @@ void Menu::searchByChoice(FoodDatabase& db) {
             cout << "Invalid choice! Please enter 1, 2, or 3.\n";
         }
     }
+}
+
+void Menu::generateGraph(){
+    string command = "py JournalGraph.py";
+    int retCode = system(command.c_str());
+
+    if(retCode != 0){
+        cout << "Failed to generate graph!" << endl;
+    }   
 }

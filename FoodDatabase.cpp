@@ -13,7 +13,7 @@ vector<Food> FoodDatabase::foods;
 // Constructor
 FoodDatabase::FoodDatabase(){
     // Loads food data from a file
-    loadFromFile("Foods.csv");
+    loadFromFile("cmake-build-debug/Foods.csv");
 }
 
 /**
@@ -25,7 +25,7 @@ void FoodDatabase::addFood(const Food &food) {
     if(findFood(food.getName()) == nullptr){
         foods.push_back(food);
     }
-    saveToFile("Foods.csv");
+    saveToFile("cmake-build-debug/Foods.csv");
 }
 /**
  * Finds food item by name returns pointer or nullptr if not there

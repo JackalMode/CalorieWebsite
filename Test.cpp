@@ -133,10 +133,10 @@ bool testFoodDatabase(){
 bool testJournal() {
     bool passed = true;
     // Create a test journal file to avoid modifying the original one
-    ofstream ofs("TestJournal.csv", ofstream::out | ofstream::trunc);
+    ofstream ofs("cmake-build-debug/TestJournal.csv", ofstream::out | ofstream::trunc);
     ofs.close();
 
-    Journal journal("TestJournal.csv");
+    Journal journal("cmake-build-debug/TestJournal.csv");
     // Test adding entries to the journal
     journal.addEntry("Orange", 62.0, "Morning snack");
     journal.addEntry("Cereal", 150.0, "Breakfast");
@@ -152,8 +152,8 @@ bool testJournal() {
         cout << "Failed Journal getCurrentDate test case" << endl;
     }
     // Test saving and loading journal entries
-    journal.saveToFile("test_journal.csv");
-    Journal loadedJournal("test_journal.csv");
+    journal.saveToFile("cmake-build-debug/test_journal.csv");
+    Journal loadedJournal("cmake-build-debug/test_journal.csv");
     if (loadedJournal.getEntryCount() != journal.getEntryCount()) {
         passed = false;
         cout << "Failed Journal loadFromFile test case" << endl;
