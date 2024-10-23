@@ -1,0 +1,16 @@
+{
+  "name": "m3oep-msteenbe",
+  "version": "1.0.0",
+  "description": "My project is a Calorie Tracker program which allows users to track their calorie intake. It allows user to:\r  * Add food and their calorie values per grams, ounces, or pounds. All units are converted to grams\r  * Maintain a journal of daily food entries, including calories consumed and optional notes\r  * Calculate total calories based on food weight in either grams, ounces, or pounds\r  * Search and filter foods by name, calories or both\r  * Display Journal Entries\r  * Remove foods from the database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
