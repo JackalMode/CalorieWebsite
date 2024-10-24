@@ -1,32 +1,91 @@
 const express = require('express');
 const { exec } = require('child_process');
-const app = express();
+const path = require('path');
 
+const app = express();
+const PORT = 3000;
+
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.post('/calculate', (req, res) => {
-    const foodName = req.body.foodName;
-    const weight = req.body.weight;
+    const { foodName, weight } = req.body;
+    const command = `./CalorieTracker calculateCaloires ${foodName} ${weight}`;
 
-    if (!foodName || !weight) {
-        return res.status(400).send("Food name and weight are required.");
-    }
-
-    const command = `calorie_calculator ${foodName} ${weight}`;
     exec(command, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error: ${stderr}`);
-            return res.status(500).send("An error occurred while calculating calories.");
+        if(error){
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
         }
-        res.send(`<h2>Result:</h2><p>${stdout}</p>`);
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.post('/add', (req, res) => {
+    const { foodName, caloriesPer100g } = req.body;
+    const command = `./CalorieTracker addFood ${foodName} ${caloriesPer100g}`;
+
+    exec(command, (error, stdout, stderr) => {
+        if(error){
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
 });
+
+app.post('/remove', (req, res) => {
+    const { foodName } = req.body;
+    const command = `./CalorieTracker removeFood ${foodName}`;
+
+    exec(command, (error, stdout, stderr) => {
+        if(error){
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
+});
+
+app.post('/search', (req, res) => {
+    const { searchType, searchTerm, calories, showLess } = req.body;
+    let command = `./CalorieTracker`;
+
+    if(searchType == 'name'){
+        command += ` searchFoodByName ${searchTerm}`;
+    } else if (searchType == 'calories'){
+        command += ` displayByCalories ${calories} ${showLess}`;
+    } else if (searchType == 'both'){
+        command += ` searchByFoodAndCalories ${searchTerm} ${calories} ${showLess}`;
+    }
+    
+    exec(command, (error, stdout, stderr) => {
+        if(error){
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
+});
+
+app.post('/generateGraph', (req, res) => {
+    const command = `py JournalGraph.py`;
+
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
