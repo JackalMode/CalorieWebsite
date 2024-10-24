@@ -1,3 +1,7 @@
+#include "Journal.h"
+#include "FoodDatabase.h"
+#include "Food.h"
+#include "Menu.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -9,15 +13,50 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    string foodName = argv[1];
-    double weight;
-    stringstream(argv[2]) >> weight;
+    FoodDatabase db;
+    Journal journal("./cmake-build-debug/Journal.csv");
+    if(action == "calculateCalories" && argc == 4){
+        string foodName = argv[2]
+        double weight = stod(argv[3]);
+        const Food* foundFood = db.findFood(foodName);
+        if(foundFood != nullptr){
+            double totalCalories = foundFood->calcuateCalories(weight);
+            cout.precision(4);
+            cout << "\nThe amount of calories in " << weight << " grams of " << foundFood->getName() << " is " << totalCalories << " calories." << endl; 
+        } else{
+            cout << "Food not found in file." << endl;
+        }
 
-    // For simplicity, we'll use hardcoded calorie values (e.g., 52 calories per 100 grams for Apple)
-    double caloriesPer100g = 52.0;  // Replace with actual logic if needed
-    double totalCalories = (caloriesPer100g / 100) * weight;
+    } 
+    else if (action == "addToJournal" && argc == 4){
+        string foodName = argv[2];
+        double weight = stod(argv[3]);
+        foodName = capitalizeName(foodName);
 
-    cout << "Calories in " << weight << " grams of " << foodName << ": " << totalCalories << " calories" << endl;
-
+        double Food* foundFood = db.findFood(foodName);
+        double totalCalories = foundFood->calculateCalories;
+        jounral.addEntry(foodName, totalCalories, note);
+        cout << "Entry Saved!" << endl;
+    }
+    else if (action == "displayEntries" && argc == 4){
+        journal.displayEntries();
+    }
+    else if (action == "addFood" && argc == 4){
+        string name = argv[2];
+        double calories = stod(rgv[3]);
+        name = capitalizeName(name);
+        if(db.findFood(name) == nullptr){
+            Food newFood(name, calories);
+            db.addFood(newFood);
+            cout << "Food added successfully" << endl;
+        } else {
+            cout << "Food already in database!" << endl;
+        }
+    } 
+    else if (action == "removeFood" && argc == 4){
+        string foodName = argv[2];
+        db.removeFood(foodName);
+    }
+    
     return 0;
 }
