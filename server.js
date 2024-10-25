@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 const PORT = 3000;
-
+console.log("Server started")
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.post('/calculate', (req, res) => {
     const { foodName, weight } = req.body;
-    const command = `CalorieTracker.exe calcCalories ${foodName} ${weight}`;
+    const command = `CalorieTracker.exe calcCalories "${foodName}" ${weight}`;
 
     exec(command, (error, stdout, stderr) => {
         if (error) {
@@ -29,7 +29,7 @@ app.post('/calculate', (req, res) => {
 
 app.post('/add', (req, res) => {
     const { foodName, caloriesPer100g } = req.body;
-    const command = `CalorieTracker addFood ${foodName} ${caloriesPer100g}`;
+    const command = `CalorieTracker addFood "${foodName}" ${caloriesPer100g}`;
 
     exec(command, (error, stdout, stderr) => {
         if(error){
@@ -42,7 +42,7 @@ app.post('/add', (req, res) => {
 
 app.post('/remove', (req, res) => {
     const { foodName } = req.body;
-    const command = `CalorieTracker removeFood ${foodName}`;
+    const command = `CalorieTracker removeFood "${foodName}"`;
 
     exec(command, (error, stdout, stderr) => {
         if(error){
@@ -55,8 +55,15 @@ app.post('/remove', (req, res) => {
 
 app.post('/search', (req, res) => {
     const { searchType, searchTerm, calories, showLess } = req.body;
-    const command = `CalorieTracker searchFood ${searchType || ''} ${searchTerm || ''} ${calories || ''} ${showLess || ''}`;
-    
+    let command = `CalorieTracker`;
+
+    if(searchType === 'name'){
+        command += ` searchFoodByName "${searchTerm}"`;
+    } else if (searchType === 'calories') {
+        command += ` displayByCalories ${calories} ${showLess}`;
+    } else if (searchType === 'both') {
+        command += ` searchByBoth "${searchTerm}" ${calories} ${showLess}`;
+    }
     exec(command, (error, stdout, stderr) => {
         if (error) {
             console.error(`Error executing command: ${error.message}`);
@@ -81,7 +88,7 @@ app.post('/generateGraph', (req, res) => {
 
 app.post('/addToJournal', (req, res) => {
     const { foodName, weight, note } = req.body;
-    const command = `CalorieTracker addToJournal ${foodName} ${weight} ${note}`;
+    const command = `CalorieTracker addToJournal "${foodName}" ${weight} "${note}"`;
     exec(command, (error, stdout, stderr) => {
         if (error) {
             res.status(500).send(`Error: ${stderr}`);
@@ -94,6 +101,19 @@ app.post('/addToJournal', (req, res) => {
 
 app.post('/displayEntries', (req, res) => {
     const command = `CalorieTracker displayEntries`;
+
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
+});
+
+app.post('/addToJournal', (req, res) => {
+    const { foodName, calories } = req.body;
+    const command = `CalorieTracker addToJournal ${foodName} ${calories}`;
 
     exec(command, (error, stdout, stderr) => {
         if (error) {

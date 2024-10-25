@@ -19,6 +19,20 @@
         <input type="submit" value="Calculate">
     </form>
 
+    <h2>Add to Journal</h2>
+    <form action="/addToJournal" method="POST">
+        <label for="addJournalFoodName">Food Name:</label>
+        <input type="text" id="addJournalFoodName" name="foodName" required><br><br>
+    
+        <label for="addJournalCalories">Calories:</label>
+        <input type="number" id="addJournalCalories" name="weight" required><br><br>
+    
+        <label for="addJournalNote">Note:</label>
+        <input type="text" id="addJournalNote" name="note"><br><br>
+    
+        <input type="submit" value="Add to Journal">
+    </form>
+
     <h2>Add food</h2>
     <form action="/add" method="POST">
         <label for="addFoodName">Food Name:</label>
@@ -38,27 +52,42 @@
         <input type="submit" value="Remove Food">
     </form>
 
-    <h2>Search Food</h2>
+    <h2>Search Food By Name</h2>
     <form action="/search" method="POST">
-        <label for="searchCriteria">Search By:</label>
-        <select id="searchCriteria" name="searchCriteria" required>
-            <option value="name">Name</option>
-            <option value="displayByCalories">Calories</option>
-            <option value="searchByFoodAndCalories">Name and Calories</option>
-        </select><br><br>
+        <input type="hidden" name="searchType" value="name">
+        <label for="searchTerm">Food Name:</label>
+        <input type="text" id="searchTerm" name="searchTerm" required><br><br>
+        <input type="submit" value="Search">
+    </form>
 
-        <label for="searchTerm">Search Term (Name):</label>
-        <input type="text" id="searchTerm" name="searchTerm"><br><br>
-
+    <h2>Search Food by Calories</h2>
+    <form action="/search" method="POST">
+        <input type="hidden" name="searchType" value="calories">
         <label for="calorieLimit">Calorie Limit:</label>
-        <input type="number" id="calorieLimit" name="calorieLimit"><br><br>
+        <input type="number" id="calorieLimit" name="calories" required><br><br>
 
         <label for="filter">Filter:</label>
-        <select id="filter" name="filter">
+        <select id="filter" name="showLess">
             <option value="l">Less Than</option>
             <option value="g">Greater Than</option>
         </select><br><br>
+        <input type="submit" value="Search">
+    </form>
 
+    <h2>Search Food by Both Name and Calories</h2>
+    <form action="/search" method="POST">
+        <input type="hidden" name="searchType" value="both">
+        <label for="searchTerm">Food Name:</label>
+        <input type="text" id="searchTerm" name="searchTerm"><br><br>
+
+        <label for="calorieLimit">Calorie Limit:</label>
+        <input type="number" id="calorieLimit" name="calories"><br><br>
+
+        <label for="filter">Filter:</label>
+        <select id="filter" name="showLess">
+            <option value="l">Less Than</option>
+            <option value="g">Greater Than</option>
+        </select><br><br>
         <input type="submit" value="Search">
     </form>
 

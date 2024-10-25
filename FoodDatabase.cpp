@@ -185,7 +185,7 @@ void FoodDatabase::searchByFoodAndCalories(const std::string &searchTerm, double
         // Convert food name to lowercase for case-insensitive comparison
         transform(lowerName.begin(), lowerName.end(), lowerName.begin(), ::tolower);
         double foodCalories = food.getCaloriesPer100g();
-        if(lowerName.find(searchTerm) != string::npos && ((showLess && foodCalories < caloriesUL) || (!showLess && foodCalories > caloriesUL))){
+        if(lowerName.find(lowerSearch) != string::npos && ((showLess && foodCalories < caloriesUL) || (!showLess && foodCalories > caloriesUL))){
             // Add matching food to the results vector
             results.push_back(food);
         }
@@ -195,7 +195,6 @@ void FoodDatabase::searchByFoodAndCalories(const std::string &searchTerm, double
         cout << "No foods found that match the search criteria." << endl;
     } else {
         cout << "Matching foods with " << (showLess ? "less than " : "greater than ") << caloriesUL << " calories:" << endl;
-        cout << "----------------------------------------------------" << endl;
         for(const auto& food : results){
             cout << food.getName() << " : " << food.getCaloriesPer100g() << " calories per 100 grams" << endl;
         }

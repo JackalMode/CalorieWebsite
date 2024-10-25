@@ -15,6 +15,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    
     FoodDatabase db;
     Journal journal("./cmake-build-debug/Journal.csv");
     string action = argv[1];
@@ -62,32 +63,29 @@ int main(int argc, char* argv[]) {
         foodName = Menu::capitalizeName(foodName);
         db.removeFood(foodName);
     }
-    else if (action == "searchFood" && argc >= 3){
-        string searchCriteria = argv[2];
-        if (searchCriteria == "name" && argc >= 4){
-            string searchTerm = argv[3];
-            searchTerm = Menu::capitalizeName(searchTerm);
-            vector<Food> results = db.searchFoodByName(searchTerm);
-            if(results.empty()){
-                cout << "No foods found matching " << searchTerm << "." << endl;
-            } else {
-                for (const auto& food : results){
-                    cout << food.getName() << " : " << food.getCaloriesPer100g() << " calories per 100 grams" << endl;
-                }
+    else if (action == "searchFoodByName" && argc == 3){
+        string searchTerm =argv[2];
+        searchTerm = Menu::capitalizeName(searchTerm);
+        vector<Food> results = db.searchFoodByName(searchTerm);
+        if(results.empty()){
+            cout << "No foods found matching " << searchTerm << "." << endl;
+        } else {
+            for (const auto& food : results){
+                cout << food.getName() << " : " << food.getCaloriesPer100g() << " calories per 100 grams" << endl;
             }
-        }
-        else if (searchCriteria == "calories" && argc >= 4) {
-            double calorieLimit = stod(argv[3]);
-            char filter = argv[4][0];
-            db.displayByCalories(calorieLimit, filter == 'l');
-        }
-        else if (searchCriteria == "both" && argc >= 5){
-            string foodName = argv[3];
-            foodName = Menu::capitalizeName(foodName);
-            double calorieLimit = stod(argv[4]);
-            char filter = argv[5][0];
-            db.searchByFoodAndCalories(foodName, calorieLimit, filter == 'l');
-        }
+        } 
+    }
+    else if (action == "displayByCalories" && argc == 4) {
+        double calorieLimit = stod(argv[2]);
+        char filter = argv[3][0];
+        db.displayByCalories(calorieLimit, filter == 'l');
+    }
+    else if (action == "searchByBoth" && argc == 5) {
+        string searchTerm = argv[2];
+        searchTerm = Menu::capitalizeName(searchTerm);
+        double calorieLimit = stod(argv[3]);
+        char filter = argv[4][0];
+        db.searchByFoodAndCalories(searchTerm, calorieLimit, filter == 'l');
     }
     else if (action == "generateGraph"){
         system("py JournalGraph.py");
