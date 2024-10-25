@@ -117,7 +117,7 @@ void FoodDatabase::removeFood(const std::string &foodName, bool displayMessage) 
 
     }
     // Save the updated list
-    saveToFile("Foods.csv");
+    saveToFile("cmake-build-debug/Foods.csv");
 }
 
 /**

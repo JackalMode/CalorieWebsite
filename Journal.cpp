@@ -51,7 +51,6 @@ void Journal::addEntry(const std::string &foodName, double calories, const std::
  */
 void Journal::displayEntries() {
     cout << "Journal Entries:" << endl;
-    cout << "-----------------" << endl;
     for(const auto& entry : entries){
         if(entry.foodName.empty()){
             cout << "No Entries Found" << endl;

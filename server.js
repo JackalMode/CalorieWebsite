@@ -55,19 +55,12 @@ app.post('/remove', (req, res) => {
 
 app.post('/search', (req, res) => {
     const { searchType, searchTerm, calories, showLess } = req.body;
-    let command = `CalorieTracker`;
-
-    if(searchType == 'name'){
-        command += ` searchFoodByName ${searchTerm}`;
-    } else if (searchType == 'calories'){
-        command += ` displayByCalories ${calories} ${showLess}`;
-    } else if (searchType == 'both'){
-        command += ` searchByFoodAndCalories ${searchTerm} ${calories} ${showLess}`;
-    }
+    const command = `CalorieTracker searchFood ${searchType || ''} ${searchTerm || ''} ${calories || ''} ${showLess || ''}`;
     
     exec(command, (error, stdout, stderr) => {
-        if(error){
-            res.status(500).send(`Error: ${stderr}`);
+        if (error) {
+            console.error(`Error executing command: ${error.message}`);
+            res.status(500).send(`Error: ${stderr || error.message}`);
         } else {
             res.send(stdout);
         }
@@ -76,6 +69,31 @@ app.post('/search', (req, res) => {
 
 app.post('/generateGraph', (req, res) => {
     const command = `py JournalGraph.py`;
+
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
+});
+
+app.post('/addToJournal', (req, res) => {
+    const { foodName, weight, note } = req.body;
+    const command = `CalorieTracker addToJournal ${foodName} ${weight} ${note}`;
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            res.status(500).send(`Error: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
+    
+});
+
+app.post('/displayEntries', (req, res) => {
+    const command = `CalorieTracker displayEntries`;
 
     exec(command, (error, stdout, stderr) => {
         if (error) {

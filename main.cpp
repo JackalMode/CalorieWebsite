@@ -21,6 +21,7 @@ int main(int argc, char* argv[]) {
     if(action == "calcCalories" && argc == 4){
         string foodName = argv[2];
         double weight = stod(argv[3]);
+        foodName = Menu::capitalizeName(foodName);
         const Food* foundFood = db.findFood(foodName);
         if(foundFood != nullptr){
             double totalCalories = foundFood->calculateCalories(weight);
@@ -31,16 +32,17 @@ int main(int argc, char* argv[]) {
         }
 
     } 
-    else if (action == "addToJournal" && argc == 4){
+    else if (action == "addToJournal" && argc == 5){
         string foodName = argv[2];
         double weight = stod(argv[3]);
+        string note = argv[4];
         foodName = Menu::capitalizeName(foodName);
         const Food* foundFood = db.findFood(foodName);
         double totalCalories = foundFood->calculateCalories(weight);
-        journal.addEntry(foodName, totalCalories, "");
+        journal.addEntry(foodName, totalCalories, note);
         cout << "Entry Saved!" << endl;
     }
-    else if (action == "displayEntries" && argc == 4){
+    else if (action == "displayEntries"){
         journal.displayEntries();
     }
     else if (action == "addFood" && argc == 4){
@@ -55,14 +57,16 @@ int main(int argc, char* argv[]) {
             cout << "Food already in database!" << endl;
         }
     } 
-    else if (action == "removeFood" && argc == 4){
+    else if (action == "removeFood" && argc == 3){
         string foodName = argv[2];
+        foodName = Menu::capitalizeName(foodName);
         db.removeFood(foodName);
     }
-    else if (action == "searchFood" && argc == 3){
+    else if (action == "searchFood" && argc >= 3){
         string searchCriteria = argv[2];
-        if (searchCriteria == "name" && argc == 4){
+        if (searchCriteria == "name" && argc >= 4){
             string searchTerm = argv[3];
+            searchTerm = Menu::capitalizeName(searchTerm);
             vector<Food> results = db.searchFoodByName(searchTerm);
             if(results.empty()){
                 cout << "No foods found matching " << searchTerm << "." << endl;
@@ -72,15 +76,16 @@ int main(int argc, char* argv[]) {
                 }
             }
         }
-        else if (searchCriteria == "calories" && argc == 4) {
+        else if (searchCriteria == "calories" && argc >= 4) {
             double calorieLimit = stod(argv[3]);
-            char filter = 'l';
+            char filter = argv[4][0];
             db.displayByCalories(calorieLimit, filter == 'l');
         }
-        else if (searchCriteria == "both" && argc == 5){
+        else if (searchCriteria == "both" && argc >= 5){
             string foodName = argv[3];
+            foodName = Menu::capitalizeName(foodName);
             double calorieLimit = stod(argv[4]);
-            char filter = 'l';
+            char filter = argv[5][0];
             db.searchByFoodAndCalories(foodName, calorieLimit, filter == 'l');
         }
     }

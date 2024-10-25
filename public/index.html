@@ -19,8 +19,57 @@
         <input type="submit" value="Calculate">
     </form>
 
-    <button id="addToJournalBtn" style="display:none;" onclick="addToJournal()">Add to Journal</button>
-    <div id="calorieOutput"></div>
+    <h2>Add food</h2>
+    <form action="/add" method="POST">
+        <label for="addFoodName">Food Name:</label>
+        <input type="text" id="addFoodName" name="foodName" required><br><br>
 
+        <label for="caloriesPer100g">Calories per 100g:</label>
+        <input type="number" id="caloriesPer100g" name="caloriesPer100g" required><br><br>
+
+        <input type="submit" value="Add Food">
+    </form>
+
+    <h2>Remove Food</h2>
+    <form action="/remove" method="POST">
+        <label for="removeFoodName">Food Name:</label>
+        <input type="text" id="removeFoodName" name="foodName" required><br><br>
+
+        <input type="submit" value="Remove Food">
+    </form>
+
+    <h2>Search Food</h2>
+    <form action="/search" method="POST">
+        <label for="searchCriteria">Search By:</label>
+        <select id="searchCriteria" name="searchCriteria" required>
+            <option value="name">Name</option>
+            <option value="displayByCalories">Calories</option>
+            <option value="searchByFoodAndCalories">Name and Calories</option>
+        </select><br><br>
+
+        <label for="searchTerm">Search Term (Name):</label>
+        <input type="text" id="searchTerm" name="searchTerm"><br><br>
+
+        <label for="calorieLimit">Calorie Limit:</label>
+        <input type="number" id="calorieLimit" name="calorieLimit"><br><br>
+
+        <label for="filter">Filter:</label>
+        <select id="filter" name="filter">
+            <option value="l">Less Than</option>
+            <option value="g">Greater Than</option>
+        </select><br><br>
+
+        <input type="submit" value="Search">
+    </form>
+
+    <h2>Generate Graph of Journal Entries</h2>
+    <form action="/generateGraph" method="POST">
+        <input type="submit" value="Generate Graph">
+    </form>
+
+    <h2>Dispaly Journal Entries</h2>
+    <form action="/displayEntries" method="POST">
+        <input type="submit" value="Display Entries">
+    </form>
 </body>
 </html>
