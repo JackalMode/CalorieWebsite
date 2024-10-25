@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CalorieTracker.dir/Food.cpp.obj.d"
   "CMakeFiles/CalorieTracker.dir/FoodDatabase.cpp.obj"
   "CMakeFiles/CalorieTracker.dir/FoodDatabase.cpp.obj.d"
+  "CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj"
+  "CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj.d"
   "CMakeFiles/CalorieTracker.dir/Journal.cpp.obj"
   "CMakeFiles/CalorieTracker.dir/Journal.cpp.obj.d"
   "CMakeFiles/CalorieTracker.dir/Menu.cpp.obj"

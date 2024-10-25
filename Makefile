@@ -195,6 +195,30 @@ FoodDatabase.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/FoodDatabase.cpp.s
 .PHONY : FoodDatabase.cpp.s
 
+HtmlRend.obj: HtmlRend.cpp.obj
+.PHONY : HtmlRend.obj
+
+# target to build an object file
+HtmlRend.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CalorieTracker.dir\build.make CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj
+.PHONY : HtmlRend.cpp.obj
+
+HtmlRend.i: HtmlRend.cpp.i
+.PHONY : HtmlRend.i
+
+# target to preprocess a source file
+HtmlRend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CalorieTracker.dir\build.make CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.i
+.PHONY : HtmlRend.cpp.i
+
+HtmlRend.s: HtmlRend.cpp.s
+.PHONY : HtmlRend.s
+
+# target to generate assembly for a file
+HtmlRend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CalorieTracker.dir\build.make CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.s
+.PHONY : HtmlRend.cpp.s
+
 Journal.obj: Journal.cpp.obj
 .PHONY : Journal.obj
 
@@ -313,6 +337,9 @@ help:
 	@echo ... FoodDatabase.obj
 	@echo ... FoodDatabase.i
 	@echo ... FoodDatabase.s
+	@echo ... HtmlRend.obj
+	@echo ... HtmlRend.i
+	@echo ... HtmlRend.s
 	@echo ... Journal.obj
 	@echo ... Journal.i
 	@echo ... Journal.s

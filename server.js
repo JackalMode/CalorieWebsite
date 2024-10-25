@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.post('/calculate', (req, res) => {
     const { foodName, weight } = req.body;
-    const command = `CalorieTracker.exe calcCalories "${foodName}" ${weight}`;
+    const command = `CalorieTracker calcCalories "${foodName}" ${weight}`;
 
     exec(command, (error, stdout, stderr) => {
         if (error) {

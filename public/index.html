@@ -4,101 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorie Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Calorie Tracker Options</h1>
+    <header>
+        <h1>Calorie Tracker Options</h1>
+        <nav>
+            <ul>
+                <li><a href="#calculate">Calculate Calories</a></li>
+                <li><a href="#journal">Add to Journal</a></li>
+                <li><a href="#food-actions">Manage Foods</a></li>
+                <li><a href="#search">Search Foods</a></li>
+                <li><a href="#generate">Generate Graph</a></li>
+                <li><a href="#Display-Journal">Display Journal Entries</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <p>This is a some text and a test</p>
+    <main>
+        <section id="calculate" class="content-section">
+            <h2>Calculate Calories</h2>
+            <form action="/calculate" method="POST">
+                <label for="foodName">Food Name:</label>
+                <input type="text" id="foodName" name="foodName" required><br><br>
+                
+                <label for="weight">Weight in grams:</label>
+                <input type="number" id="weight" name="weight" required><br><br>
+                
+                <input type="submit" value="Calculate">
+            </form>
+        </section>
 
-    <h2>Calculate Calories</h2>
-    <form action="/calculate" method="POST">
-        <label for="foodName">Food Name:</label>
-        <input type="text" id="foodName" name="foodName" required><br><br>
+        <section id="journal" class="content-section">
+            <h2>Add to Journal</h2>
+            <form action="/addToJournal" method="POST">
+                <label for="addJournalFoodName">Food Name:</label>
+                <input type="text" id="addJournalFoodName" name="foodName" required><br><br>
+            
+                <label for="addJournalCalories">Calories:</label>
+                <input type="number" id="addJournalCalories" name="weight" required><br><br>
+            
+                <label for="addJournalNote">Note:</label>
+                <input type="text" id="addJournalNote" name="note"><br><br>
+            
+                <input type="submit" value="Add to Journal">
+            </form>
+        </section>
         
-        <label for="weight">Weight in grams:</label>
-        <input type="number" id="weight" name="weight" required><br><br>
+        <section id="food-actions" class="content-section">
+            <h2>Add food</h2>
+            <form action="/add" method="POST">
+                <label for="addFoodName">Food Name:</label>
+                <input type="text" id="addFoodName" name="foodName" required><br><br>
+
+                <label for="caloriesPer100g">Calories per 100g:</label>
+                <input type="number" id="caloriesPer100g" name="caloriesPer100g" required><br><br>
+
+                <input type="submit" value="Add Food">
+            </form>
+
+            <h2>Remove Food</h2>
+            <form action="/remove" method="POST">
+                <label for="removeFoodName">Food Name:</label>
+                <input type="text" id="removeFoodName" name="foodName" required><br><br>
+
+                <input type="submit" value="Remove Food">
+            </form>
+        </section>
         
-        <input type="submit" value="Calculate">
-    </form>
+        <section id="search" class="content-section">
+            <h2>Search Food</h2>
+            <form action="/search" method="POST">
+                <label for="searchType">Search By:</label>
+                <select id="searchType" name="searchType" required>
+                    <option value="name">Name</option>
+                    <option value="calories">Calories</option>
+                    <option value="both">Name and Calories</option>
+                </select><br><br>
 
-    <h2>Add to Journal</h2>
-    <form action="/addToJournal" method="POST">
-        <label for="addJournalFoodName">Food Name:</label>
-        <input type="text" id="addJournalFoodName" name="foodName" required><br><br>
-    
-        <label for="addJournalCalories">Calories:</label>
-        <input type="number" id="addJournalCalories" name="weight" required><br><br>
-    
-        <label for="addJournalNote">Note:</label>
-        <input type="text" id="addJournalNote" name="note"><br><br>
-    
-        <input type="submit" value="Add to Journal">
-    </form>
+                <label for="searchTerm">Search Term (Name):</label>
+                <input type="text" id="searchTerm" name="searchTerm"><br><br>
 
-    <h2>Add food</h2>
-    <form action="/add" method="POST">
-        <label for="addFoodName">Food Name:</label>
-        <input type="text" id="addFoodName" name="foodName" required><br><br>
+                <label for="calories">Calorie Limit:</label>
+                <input type="number" id="calories" name="calories"><br><br>
 
-        <label for="caloriesPer100g">Calories per 100g:</label>
-        <input type="number" id="caloriesPer100g" name="caloriesPer100g" required><br><br>
+                <label for="showLess">Filter:</label>
+                <select id="showLess" name="showLess">
+                    <option value="l">Less Than</option>
+                    <option value="g">Greater Than</option>
+                </select><br><br>
 
-        <input type="submit" value="Add Food">
-    </form>
-
-    <h2>Remove Food</h2>
-    <form action="/remove" method="POST">
-        <label for="removeFoodName">Food Name:</label>
-        <input type="text" id="removeFoodName" name="foodName" required><br><br>
-
-        <input type="submit" value="Remove Food">
-    </form>
-
-    <h2>Search Food By Name</h2>
-    <form action="/search" method="POST">
-        <input type="hidden" name="searchType" value="name">
-        <label for="searchTerm">Food Name:</label>
-        <input type="text" id="searchTerm" name="searchTerm" required><br><br>
-        <input type="submit" value="Search">
-    </form>
-
-    <h2>Search Food by Calories</h2>
-    <form action="/search" method="POST">
-        <input type="hidden" name="searchType" value="calories">
-        <label for="calorieLimit">Calorie Limit:</label>
-        <input type="number" id="calorieLimit" name="calories" required><br><br>
-
-        <label for="filter">Filter:</label>
-        <select id="filter" name="showLess">
-            <option value="l">Less Than</option>
-            <option value="g">Greater Than</option>
-        </select><br><br>
-        <input type="submit" value="Search">
-    </form>
-
-    <h2>Search Food by Both Name and Calories</h2>
-    <form action="/search" method="POST">
-        <input type="hidden" name="searchType" value="both">
-        <label for="searchTerm">Food Name:</label>
-        <input type="text" id="searchTerm" name="searchTerm"><br><br>
-
-        <label for="calorieLimit">Calorie Limit:</label>
-        <input type="number" id="calorieLimit" name="calories"><br><br>
-
-        <label for="filter">Filter:</label>
-        <select id="filter" name="showLess">
-            <option value="l">Less Than</option>
-            <option value="g">Greater Than</option>
-        </select><br><br>
-        <input type="submit" value="Search">
-    </form>
-
-    <h2>Generate Graph of Journal Entries</h2>
-    <form action="/generateGraph" method="POST">
-        <input type="submit" value="Generate Graph">
-    </form>
-
-    <h2>Dispaly Journal Entries</h2>
-    <form action="/displayEntries" method="POST">
-        <input type="submit" value="Display Entries">
-    </form>
+                <input type="submit" value="Search">
+            </form>
+        </section>
+   
+        <section id="generate" class="content-section">
+            <h2>Generate Graph of Journal Entries</h2>
+            <form action="/generateGraph" method="POST">
+                <input type="submit" value="Generate Graph">
+            </form>
+        </section>
+        <section id="Display-Journal" class="content-section">
+            <h2>Dispaly Journal Entries</h2>
+            <form action="/displayEntries" method="POST">
+                <input type="submit" value="Display Entries">
+            </form>
+        </section>    
+    </main>
+    <footer>
+        <p>&copy; 2024 Mitchell Steenbergen - Calorie Tracker Project</p>
+    </footer>
 </body>
 </html>

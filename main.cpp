@@ -2,6 +2,7 @@
 #include "FoodDatabase.h"
 #include "Food.h"
 #include "Menu.h"
+#include "HtmlRend.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -19,20 +20,18 @@ int main(int argc, char* argv[]) {
     FoodDatabase db;
     Journal journal("./cmake-build-debug/Journal.csv");
     string action = argv[1];
-    if(action == "calcCalories" && argc == 4){
+    if (action == "calcCalories" && argc == 4) {
         string foodName = argv[2];
         double weight = stod(argv[3]);
         foodName = Menu::capitalizeName(foodName);
         const Food* foundFood = db.findFood(foodName);
-        if(foundFood != nullptr){
+        if (foundFood) {
             double totalCalories = foundFood->calculateCalories(weight);
-            cout.precision(4);
-            cout << "\nThe amount of calories in " << weight << " grams of " << foundFood->getName() << " is " << totalCalories << " calories." << endl; 
-        } else{
-            cout << "Food not found in file." << endl;
+            HtmlRend::rendCalorieResult(foodName, weight, totalCalories);
+        } else {
+            HtmlRend::rendFoodNotFound(foodName);
         }
-
-    } 
+    }
     else if (action == "addToJournal" && argc == 5){
         string foodName = argv[2];
         double weight = stod(argv[3]);
