@@ -727,13 +727,9 @@ CMakeFiles/CalorieTracker.dir/Menu.cpp.obj
 
 CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/CLionProjects/M3OEP-msteenbe/main.cpp
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/array
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/backward/binders.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bit
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/algorithmfwd.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/align.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/alloc_traits.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/allocated_ptr.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/allocator.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/basic_ios.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/basic_ios.tcc
@@ -741,14 +737,11 @@ CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/basic_string.tcc
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/char_traits.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/charconv.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/chrono.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/chrono_io.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/codecvt.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/concept_check.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/cpp_type_traits.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/cxxabi_forced.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/cxxabi_init_exception.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/enable_special_members.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/exception.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/exception_defines.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/exception_ptr.h
@@ -762,11 +755,8 @@ CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/iterator_concepts.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/locale_classes.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/locale_classes.tcc
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/locale_conv.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/locale_facets.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/locale_facets.tcc
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/locale_facets_nonio.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/locale_facets_nonio.tcc
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/localefwd.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/max_size_type.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/memory_resource.h
@@ -776,43 +766,31 @@ CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/new_allocator.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ostream.tcc
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ostream_insert.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/parse_numbers.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/postypes.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/predefined_ops.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ptr_traits.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/quoted_string.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/range_access.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_algobase.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_base.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_cmp.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_util.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/refwrap.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/requires_hosted.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/shared_ptr.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/shared_ptr_base.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/sstream.tcc
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/std_abs.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_algo.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_algobase.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_bvector.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_construct.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_function.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_heap.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator_base_funcs.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator_base_types.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_pair.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_tempbuf.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_uninitialized.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_vector.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/streambuf.tcc
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/streambuf_iterator.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/string_view.tcc
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stringfwd.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/unicode-data.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/unicode.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uniform_int_dist.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/unique_ptr.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uses_allocator.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uses_allocator_args.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/utility.h
@@ -820,45 +798,32 @@ CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/version.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cctype
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cerrno
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/charconv
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/chrono
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/clocale
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/compare
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/concepts
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cstddef
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cstdint
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cstdio
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cstdlib
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ctime
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cwchar
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cwctype
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/debug/assertions.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/debug/debug.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/exception
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/aligned_buffer.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/alloc_traits.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/atomicity.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/concurrence.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/numeric_traits.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/string_conversions.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/type_traits.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/format
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/fstream
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/initializer_list
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/iomanip
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ios
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/iosfwd
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/iostream
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/istream
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/limits
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/locale
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/new
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/numbers
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/optional
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ostream
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/pstl/pstl_config.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ratio
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/span
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/sstream
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/stdexcept
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/stdlib.h
@@ -869,7 +834,6 @@ CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/tuple
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/type_traits
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/typeinfo
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/variant
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/vector
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h
@@ -883,13 +847,10 @@ CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h
- C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h
  C:/Users/Mitchell Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
@@ -920,7 +881,6 @@ CMakeFiles/CalorieTracker.dir/main.cpp.obj
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/signal.h
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/stddef.h
- C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/stdint.h
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/stdio.h
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/Mitchell Steenbergen/mingw64/x86_64-w64-mingw32/include/swprintf.inl

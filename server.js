@@ -15,11 +15,12 @@ app.get('/', (req, res) => {
 
 app.post('/calculate', (req, res) => {
     const { foodName, weight } = req.body;
-    const command = `./CalorieTracker calculateCaloires ${foodName} ${weight}`;
+    const command = `CalorieTracker.exe calcCalories ${foodName} ${weight}`;
 
     exec(command, (error, stdout, stderr) => {
-        if(error){
-            res.status(500).send(`Error: ${stderr}`);
+        if (error) {
+            console.error(`Error executing command: ${error.message}`);
+            res.status(500).send(`Error: ${stderr || error.message}`);
         } else {
             res.send(stdout);
         }
@@ -28,7 +29,7 @@ app.post('/calculate', (req, res) => {
 
 app.post('/add', (req, res) => {
     const { foodName, caloriesPer100g } = req.body;
-    const command = `./CalorieTracker addFood ${foodName} ${caloriesPer100g}`;
+    const command = `CalorieTracker addFood ${foodName} ${caloriesPer100g}`;
 
     exec(command, (error, stdout, stderr) => {
         if(error){
@@ -41,7 +42,7 @@ app.post('/add', (req, res) => {
 
 app.post('/remove', (req, res) => {
     const { foodName } = req.body;
-    const command = `./CalorieTracker removeFood ${foodName}`;
+    const command = `CalorieTracker removeFood ${foodName}`;
 
     exec(command, (error, stdout, stderr) => {
         if(error){
@@ -54,7 +55,7 @@ app.post('/remove', (req, res) => {
 
 app.post('/search', (req, res) => {
     const { searchType, searchTerm, calories, showLess } = req.body;
-    let command = `./CalorieTracker`;
+    let command = `CalorieTracker`;
 
     if(searchType == 'name'){
         command += ` searchFoodByName ${searchTerm}`;
