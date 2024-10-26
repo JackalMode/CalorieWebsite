@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/Food.cpp.obj.d"
   "CMakeFiles/test.dir/FoodDatabase.cpp.obj"
   "CMakeFiles/test.dir/FoodDatabase.cpp.obj.d"
+  "CMakeFiles/test.dir/HtmlRend.cpp.obj"
+  "CMakeFiles/test.dir/HtmlRend.cpp.obj.d"
   "CMakeFiles/test.dir/Journal.cpp.obj"
   "CMakeFiles/test.dir/Journal.cpp.obj.d"
   "CMakeFiles/test.dir/Menu.cpp.obj"

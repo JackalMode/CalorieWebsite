@@ -1,4 +1,5 @@
 #include "Journal.h"
+#include "HtmlRend.h"
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -50,15 +51,7 @@ void Journal::addEntry(const std::string &foodName, double calories, const std::
  * Displays all the entries in the journal
  */
 void Journal::displayEntries() {
-    cout << "Journal Entries:" << endl;
-    for(const auto& entry : entries){
-        if(entry.foodName.empty()){
-            cout << "No Entries Found" << endl;
-            return;
-        }
-        cout << entry.date << ": " << entry.foodName << " - " << entry.calories << " calories. Notes: " << entry.note << endl;
-    }
-    cout << endl;
+   HtmlRend::rendDisplayEntries(entries);
 }
 
 /**

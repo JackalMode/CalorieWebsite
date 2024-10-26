@@ -21,4 +21,6 @@ add_executable(test Test.cpp Food.cpp
         Menu.cpp
         Menu.h
         Journal.cpp
-        Journal.h)
+        Journal.h
+        HtmlRend.cpp
+        HtmlRend.h)

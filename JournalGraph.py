@@ -39,10 +39,7 @@ def plotCalories(entries):
     plt.tight_layout()
 
     # Save the graph to a file
-    plt.savefig('CaloriesOverTime.png')
-
-    # Show the graph
-    plt.show()
+    plt.savefig('public/CaloriesOverTime.png')
 
 if __name__ == "__main__":
     filename = "cmake-build-debug/Journal.csv"

@@ -34,13 +34,18 @@ int main(int argc, char* argv[]) {
     }
     else if (action == "addToJournal" && argc == 5){
         string foodName = argv[2];
-        double weight = stod(argv[3]);
+        double weight = stod(argv[3]);\
         string note = argv[4];
         foodName = Menu::capitalizeName(foodName);
         const Food* foundFood = db.findFood(foodName);
-        double totalCalories = foundFood->calculateCalories(weight);
-        journal.addEntry(foodName, totalCalories, note);
-        cout << "Entry Saved!" << endl;
+        if(foundFood){
+            double totalCalories = foundFood->calculateCalories(weight);
+            journal.addEntry(foodName, totalCalories, note);
+            HtmlRend::rendAddToJournal(foodName, weight, totalCalories, note);
+        } else {
+            HtmlRend::rendFoodNotFound(foodName);
+        }
+       
     }
     else if (action == "displayEntries"){
         journal.displayEntries();
@@ -52,9 +57,9 @@ int main(int argc, char* argv[]) {
         if(db.findFood(name) == nullptr){
             Food newFood(name, calories);
             db.addFood(newFood);
-            cout << "Food added successfully" << endl;
+            HtmlRend::rendAddFood(name, true);
         } else {
-            cout << "Food already in database!" << endl;
+            HtmlRend::rendAddFood(name, false);
         }
     } 
     else if (action == "removeFood" && argc == 3){
@@ -66,13 +71,7 @@ int main(int argc, char* argv[]) {
         string searchTerm =argv[2];
         searchTerm = Menu::capitalizeName(searchTerm);
         vector<Food> results = db.searchFoodByName(searchTerm);
-        if(results.empty()){
-            cout << "No foods found matching " << searchTerm << "." << endl;
-        } else {
-            for (const auto& food : results){
-                cout << food.getName() << " : " << food.getCaloriesPer100g() << " calories per 100 grams" << endl;
-            }
-        } 
+        HtmlRend::rendSearchByName(results, searchTerm);
     }
     else if (action == "displayByCalories" && argc == 4) {
         double calorieLimit = stod(argv[2]);

@@ -1,6 +1,8 @@
 const express = require('express');
 const { exec } = require('child_process');
 const path = require('path');
+const fs = require('fs');
+const csv = require('csv-parser');
 
 const app = express();
 const PORT = 3000;
@@ -81,7 +83,7 @@ app.post('/generateGraph', (req, res) => {
         if (error) {
             res.status(500).send(`Error: ${stderr}`);
         } else {
-            res.send(stdout);
+            res.sendFile(path.join(__dirname, 'public', 'displayGraph.html'));
         }
     });
 });
@@ -91,6 +93,7 @@ app.post('/addToJournal', (req, res) => {
     const command = `CalorieTracker addToJournal "${foodName}" ${weight} "${note}"`;
     exec(command, (error, stdout, stderr) => {
         if (error) {
+            console.error(`Error executing command: ${error.message}`);
             res.status(500).send(`Error: ${stderr}`);
         } else {
             res.send(stdout);
@@ -123,6 +126,19 @@ app.post('/addToJournal', (req, res) => {
         }
     });
 });
+
+app.get('/journal-data', (req, res) => {
+    const results = [['Date', 'Calories']];
+    fs.createReadStream('./cmake-build-debug/Journal.csv')
+      .pipe(csv())
+      .on('data', (row) => {
+        results.push([row.Date, parseFloat(row.Calories)]);
+      })
+      .on('end', () => {
+        res.json(results);
+      });
+  });
+  
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

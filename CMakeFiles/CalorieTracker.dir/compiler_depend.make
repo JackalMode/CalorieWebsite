@@ -343,11 +343,15 @@ CMakeFiles/CalorieTracker.dir/FoodDatabase.cpp.obj: FoodDatabase.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/wctype.h \
   Food.h \
-  FoodDatabase.h
+  FoodDatabase.h \
+  HtmlRend.h \
+  Journal.h
 
 CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/algorithm \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/backward/binders.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bit \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/algorithmfwd.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/alloc_traits.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/allocator.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/basic_ios.h \
@@ -356,6 +360,7 @@ CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/basic_string.tcc \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/char_traits.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/charconv.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/codecvt.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/concept_check.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/cpp_type_traits.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/cxxabi_forced.h \
@@ -363,6 +368,7 @@ CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/exception.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/exception_defines.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/exception_ptr.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/fstream.tcc \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/functexcept.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/functional_hash.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/hash_bytes.h \
@@ -387,26 +393,37 @@ CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/predefined_ops.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ptr_traits.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/range_access.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_algo.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_algobase.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_base.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_cmp.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ranges_util.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/refwrap.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/requires_hosted.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/sstream.tcc \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/std_abs.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_algo.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_algobase.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_bvector.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_construct.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_function.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_heap.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator_base_types.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_pair.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_tempbuf.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_uninitialized.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_vector.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/streambuf.tcc \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/streambuf_iterator.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/string_view.tcc \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stringfwd.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uniform_int_dist.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uses_allocator.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uses_allocator_args.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/utility.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/vector.tcc \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/version.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cctype \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cerrno \
@@ -426,6 +443,7 @@ CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/numeric_traits.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/string_conversions.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ext/type_traits.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/fstream \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/initializer_list \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ios \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/iosfwd \
@@ -434,7 +452,10 @@ CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/new \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/numbers \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ostream \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/pstl/execution_defs.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/pstl/glue_algorithm_defs.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/pstl/pstl_config.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/sstream \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/stdexcept \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/stdlib.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/streambuf \
@@ -444,9 +465,12 @@ CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/tuple \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/type_traits \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/typeinfo \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/vector \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -497,7 +521,10 @@ CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj: HtmlRend.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/wctype.h \
-  HtmlRend.h
+  Food.h \
+  FoodDatabase.h \
+  HtmlRend.h \
+  Journal.h
 
 CMakeFiles/CalorieTracker.dir/Journal.cpp.obj: Journal.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/array \
@@ -704,6 +731,7 @@ CMakeFiles/CalorieTracker.dir/Journal.cpp.obj: Journal.cpp \
   C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/wctype.h \
   Food.h \
+  HtmlRend.h \
   Journal.h
 
 CMakeFiles/CalorieTracker.dir/Menu.cpp.obj: Menu.cpp \
@@ -1444,9 +1472,11 @@ C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include
 
 FoodDatabase.h:
 
-HtmlRend.cpp:
-
 HtmlRend.h:
+
+Journal.h:
+
+HtmlRend.cpp:
 
 Journal.cpp:
 
@@ -1475,8 +1505,6 @@ C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include
 C:/Users/Mitchell\ Steenbergen/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/span:
 
 C:/Users/Mitchell\ Steenbergen/mingw64/x86_64-w64-mingw32/include/stdint.h:
-
-Journal.h:
 
 Menu.h:
 

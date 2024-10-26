@@ -201,6 +201,7 @@ HtmlRend.obj: HtmlRend.cpp.obj
 # target to build an object file
 HtmlRend.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CalorieTracker.dir\build.make CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/HtmlRend.cpp.obj
 .PHONY : HtmlRend.cpp.obj
 
 HtmlRend.i: HtmlRend.cpp.i
@@ -209,6 +210,7 @@ HtmlRend.i: HtmlRend.cpp.i
 # target to preprocess a source file
 HtmlRend.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CalorieTracker.dir\build.make CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/HtmlRend.cpp.i
 .PHONY : HtmlRend.cpp.i
 
 HtmlRend.s: HtmlRend.cpp.s
@@ -217,6 +219,7 @@ HtmlRend.s: HtmlRend.cpp.s
 # target to generate assembly for a file
 HtmlRend.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CalorieTracker.dir\build.make CMakeFiles/CalorieTracker.dir/HtmlRend.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/HtmlRend.cpp.s
 .PHONY : HtmlRend.cpp.s
 
 Journal.obj: Journal.cpp.obj

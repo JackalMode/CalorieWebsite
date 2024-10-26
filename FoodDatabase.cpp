@@ -1,5 +1,6 @@
 #include "FoodDatabase.h"
 #include "Food.h"
+#include "HtmlRend.h"
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -90,10 +91,6 @@ void FoodDatabase::saveToFile(const std::string &filename) {
  * @param foodName
  */
 void FoodDatabase::removeFood(const std::string &foodName, bool displayMessage) {
-    if(foodName.empty()){
-        cout << "Food Name cannot be Empty" << endl;
-        return;
-    }
 
     bool found = false;
     // Iterate through the foods vector to find the specified food
@@ -102,7 +99,7 @@ void FoodDatabase::removeFood(const std::string &foodName, bool displayMessage) 
             // Remove the food from the vector
             foods.erase(foods.begin() + i);
             if(displayMessage){
-                cout << foodName << " has been removed from the food database." << endl;
+                HtmlRend::rendRemoveFood(foodName, true);
             }
             found = true;
             break;
@@ -112,7 +109,7 @@ void FoodDatabase::removeFood(const std::string &foodName, bool displayMessage) 
     if(!found) {
         if(displayMessage){
             // If food is not found, print message
-            cout << foodName << " not found in the food database." << endl;
+            HtmlRend::rendRemoveFood(foodName, false);
         }
 
     }
@@ -151,20 +148,7 @@ vector<Food> FoodDatabase::searchFoodByName(const std::string &searchTerm) {
  * @param showLess
  */
 void FoodDatabase::displayByCalories(double calorieUL, bool showLess) {
-    if(foods.empty()){
-        cout << "No food in the database!" << endl;
-        return;
-    }
-    cout << endl;
-    cout << "Foods with calories " << (showLess ? "less than " : "greater than ") << calorieUL << " per 100 grams:" << endl;
-    cout << "----------------------------------------------------" << endl;
-    // Iterate through the foods vector and display the foods that match the criteria
-    for(const auto& food : foods){
-        double foodCalories = food.getCaloriesPer100g();
-        if((showLess && foodCalories < calorieUL) || (!showLess && foodCalories > calorieUL)){
-            cout << food.getName() << " : " << foodCalories << " calories per 100 grams" << endl;
-        }
-    }
+    HtmlRend::rendSearchByCal(foods, calorieUL, showLess);
 }
 
 /**
@@ -190,13 +174,5 @@ void FoodDatabase::searchByFoodAndCalories(const std::string &searchTerm, double
             results.push_back(food);
         }
     }
-    // Display the search results
-    if(results.empty()){
-        cout << "No foods found that match the search criteria." << endl;
-    } else {
-        cout << "Matching foods with " << (showLess ? "less than " : "greater than ") << caloriesUL << " calories:" << endl;
-        for(const auto& food : results){
-            cout << food.getName() << " : " << food.getCaloriesPer100g() << " calories per 100 grams" << endl;
-        }
-    }
+    HtmlRend::rendSearchByCalName(results, searchTerm, caloriesUL, showLess);
 }
