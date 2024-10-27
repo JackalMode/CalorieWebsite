@@ -6,7 +6,7 @@
 #include <algorithm>
 
 using namespace std;
-
+// Displays the result of calculating the calories for a food
 void HtmlRend::rendCalorieResult(const string& foodName, double weight, double totalCalories){
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";
@@ -19,33 +19,14 @@ void HtmlRend::rendCalorieResult(const string& foodName, double weight, double t
     cout << "<body>\n";
     cout << "<div class='result-container'>\n";
     cout << "<h1>Calorie Calculation Result</h1>\n";
+    // Display calculated calories
     cout << "<p>The amount of calories in " << weight << " grams of " << foodName << " is " << totalCalories << " calories.</p>\n";
     cout << "<a class='back-link' href='/'>Go Back to Main Page</a>\n";
     cout << "</div>\n";
     cout << "</body>\n";
     cout << "</html>\n";
 }
-
-void HtmlRend::rendFoodNotFound(const string& foodName){
-    cout << "<!DOCTYPE html>\n";
-    cout << "<html lang='en'>\n";
-    cout << "<head>\n";
-    cout << "<meta charset='UTF-8'>\n";
-    cout << "<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n";
-    cout << "<title>Calorie Calculation Result</title>\n";
-    cout << "<link rel='stylesheet' href='cpp.css'>\n";
-    cout << "</head>\n";
-    cout << "<body>\n";
-    cout << "<div class='result-container'>\n";
-    cout << "<h1>Calorie Calculation Result</h1>\n";
-    cout << "<h1>Food Not Found</h1>\n";
-    cout << "<p>The food \"" << foodName << "\" was not found in the database.</p>\n";
-    cout << "<a class='back-link' href='/'>Go Back to Main Page</a>\n";
-    cout << "</div>\n";
-    cout << "</body>\n";
-    cout << "</html>\n";
-}
-
+// Displays search results for a given food name
 void HtmlRend::rendSearchByName(const vector<Food>& results, const string& searchTerm){
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";
@@ -68,12 +49,14 @@ void HtmlRend::rendSearchByName(const vector<Food>& results, const string& searc
         }
         cout << "</ul>\n";
     } 
+    cout << "</div>\n";
+    cout << "<div class='back-link-container'>\n";
     cout << "<a class='back-link' href='/'>Go Back to Main Page</a>\n";
     cout << "</div>\n";
     cout << "</body>\n";
     cout << "</html>\n";
 }
-
+// Displays search results based on calories, with a filter for less/greater than a limit
 void HtmlRend::rendSearchByCal(const vector<Food>& foods, double calorieUL, bool showLess){
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";
@@ -100,12 +83,14 @@ void HtmlRend::rendSearchByCal(const vector<Food>& foods, double calorieUL, bool
         }
     }
     cout << "</ul>\n";
-    cout << "<a class='back-link' href='/'>Go Back to Main Page</a>\n";
     cout << "</div>\n";
+    cout << "</div>\n";
+    cout << "<div class='back-link-container'>\n";
+    cout << "<a class='back-link' href='/'>Go Back to Main Page</a>\n";
     cout << "</body>\n";
     cout << "</html>\n";
 }
-
+// Displays search results by both name and calorie limit
 void HtmlRend::rendSearchByCalName(const vector<Food>& results, const string& searchTerm, double calorieUL, bool showLess){
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";
@@ -128,12 +113,14 @@ void HtmlRend::rendSearchByCalName(const vector<Food>& results, const string& se
         }
         cout << "</ul>\n";
     }
+    cout << "</div>\n";
+    cout << "<div class='back-link-container'>\n";
     cout << "<a class='back-link' href='/'>Go Back to Main Page</a>\n";
     cout << "</div>\n";
     cout << "</body>\n";
     cout << "</html>\n";
 }
-
+// Displays the display of journal entries
 void HtmlRend::rendDisplayEntries(const vector<JournalEntry>& entries){
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";
@@ -160,7 +147,7 @@ void HtmlRend::rendDisplayEntries(const vector<JournalEntry>& entries){
     cout << "</body>\n";
     cout << "</html>\n";
 }
-
+// Displays the result of adding an entry to the journal
 void HtmlRend::rendAddToJournal(const string& foodName, double weight, double totalCalories, const string& note) {
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";
@@ -184,7 +171,7 @@ void HtmlRend::rendAddToJournal(const string& foodName, double weight, double to
     cout << "</body>\n";
     cout << "</html>\n";
 }
-
+// Displays the result of adding a food to the database
 void HtmlRend::rendAddFood(const string& foodName, bool add){
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";
@@ -207,7 +194,7 @@ void HtmlRend::rendAddFood(const string& foodName, bool add){
     cout << "</body>\n";
     cout << "</html>\n";
 }
-
+// Displays the result of removing a food from the database
 void HtmlRend::rendRemoveFood(const string& foodName, bool remove){
     cout << "<!DOCTYPE html>\n";
     cout << "<html lang='en'>\n";

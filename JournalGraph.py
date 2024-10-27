@@ -1,7 +1,9 @@
 import csv  
 import matplotlib.pyplot as plt
 from datetime import datetime
+from collections import defaultdict
 
+# Reads journal data from a CSV file and returns a list of (date, calories) 
 def journalData(filename):
     entries = []
     try:
@@ -11,7 +13,9 @@ def journalData(filename):
                 if len(row) < 1:
                     continue
                 try:
-                    date = datetime.strptime(row[0], '%Y-%m-%d')
+                    # Convert date to a datetime object
+                    date = datetime.strptime(row[0], '%Y-%m-%d').date()
+                    # Get calories from the third column
                     calories = float(row[2])
                     entries.append((date, calories))
                 except ValueError:
@@ -21,24 +25,28 @@ def journalData(filename):
     
     return entries
 
+# Plots the total calories consumed per day from the journal entries
 def plotCalories(entries):
-    entries.sort(key=lambda x: x[0])
+    caloriesByDate = defaultdict(float)
+    for entry in entries:
+        date, calories = entry
+        caloriesByDate[date] += calories
 
-    dates = [entry[0] for entry in entries]
-    calories = [entry[1] for entry in entries]
+    # Extract dates and corresponding total calories for plotting
+    dates = list(caloriesByDate.keys())
+    totalCalories = list(caloriesByDate.values())
 
 
     ax = plt.subplot(111)
-    ax.plot(dates, calories, marker='o', linestyle='-', color='b', label='Calories')
+    ax.plot(dates, totalCalories, marker='o', linestyle='-', color='b', label='Total Calories')
     plt.gcf().canvas.manager.set_window_title('Calorie Tracker - Journal Data')
-    plt.title('Calories Consumed Over Time')
+    plt.title('Total Calories Consumer Per Day')
     plt.xlabel('Date')
-    plt.ylabel('Calories Consumed')
+    plt.ylabel('Total Calories Consumed')
     plt.xticks(rotation=45)
     plt.grid(True)
     plt.tight_layout()
 
-    # Save the graph to a file
     plt.savefig('public/CaloriesOverTime.png')
 
 if __name__ == "__main__":
