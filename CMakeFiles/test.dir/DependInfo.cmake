@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Mitchell Steenbergen/CLionProjects/M3OEP-msteenbe/Food.cpp" "CMakeFiles/test.dir/Food.cpp.obj" "gcc" "CMakeFiles/test.dir/Food.cpp.obj.d"
-  "C:/Users/Mitchell Steenbergen/CLionProjects/M3OEP-msteenbe/FoodDatabase.cpp" "CMakeFiles/test.dir/FoodDatabase.cpp.obj" "gcc" "CMakeFiles/test.dir/FoodDatabase.cpp.obj.d"
-  "C:/Users/Mitchell Steenbergen/CLionProjects/M3OEP-msteenbe/HtmlRend.cpp" "CMakeFiles/test.dir/HtmlRend.cpp.obj" "gcc" "CMakeFiles/test.dir/HtmlRend.cpp.obj.d"
-  "C:/Users/Mitchell Steenbergen/CLionProjects/M3OEP-msteenbe/Journal.cpp" "CMakeFiles/test.dir/Journal.cpp.obj" "gcc" "CMakeFiles/test.dir/Journal.cpp.obj.d"
-  "C:/Users/Mitchell Steenbergen/CLionProjects/M3OEP-msteenbe/Menu.cpp" "CMakeFiles/test.dir/Menu.cpp.obj" "gcc" "CMakeFiles/test.dir/Menu.cpp.obj.d"
-  "C:/Users/Mitchell Steenbergen/CLionProjects/M3OEP-msteenbe/Test.cpp" "CMakeFiles/test.dir/Test.cpp.obj" "gcc" "CMakeFiles/test.dir/Test.cpp.obj.d"
+  "C:/Users/Mitchell Steenbergen/CLionProjects/CalorieTrackerWebsite/Food.cpp" "CMakeFiles/test.dir/Food.cpp.obj" "gcc" "CMakeFiles/test.dir/Food.cpp.obj.d"
+  "C:/Users/Mitchell Steenbergen/CLionProjects/CalorieTrackerWebsite/FoodDatabase.cpp" "CMakeFiles/test.dir/FoodDatabase.cpp.obj" "gcc" "CMakeFiles/test.dir/FoodDatabase.cpp.obj.d"
+  "C:/Users/Mitchell Steenbergen/CLionProjects/CalorieTrackerWebsite/HtmlRend.cpp" "CMakeFiles/test.dir/HtmlRend.cpp.obj" "gcc" "CMakeFiles/test.dir/HtmlRend.cpp.obj.d"
+  "C:/Users/Mitchell Steenbergen/CLionProjects/CalorieTrackerWebsite/Journal.cpp" "CMakeFiles/test.dir/Journal.cpp.obj" "gcc" "CMakeFiles/test.dir/Journal.cpp.obj.d"
+  "C:/Users/Mitchell Steenbergen/CLionProjects/CalorieTrackerWebsite/Menu.cpp" "CMakeFiles/test.dir/Menu.cpp.obj" "gcc" "CMakeFiles/test.dir/Menu.cpp.obj.d"
+  "C:/Users/Mitchell Steenbergen/CLionProjects/CalorieTrackerWebsite/Test.cpp" "CMakeFiles/test.dir/Test.cpp.obj" "gcc" "CMakeFiles/test.dir/Test.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
